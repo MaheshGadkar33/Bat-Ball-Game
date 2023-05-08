@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to HMX Media</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-color: #0c0c0c;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      h1 {
+        font-size: 48px;
+        text-shadow: 2px 2px 4px #dcca87;
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 24px;
+      }
+      img {
+        margin-bottom: 50px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
+      label {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #4a4a4a;
+      }
+      input[type="text"] {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 2px solid #4a4a4a;
+        margin-bottom: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #0c0c0c;
+        border: none;
+        color: #dcca87;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      /* Animation styles */
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <img
+        src="https://www.hmxmedia.com/wp-content/uploads/hmx_logo_02.png"
+        alt="img"
+      />
+      <h1>Welcome to HMX Media</h1>
+      <form>
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="button" onclick="startGame()">Start The Game</button>
+      </form>
+    </div>
+
+    <script>
+      function startGame() {
+        var name = document.getElementById("name").value;
+        // Redirect to another page
+        window.location.href = "batandball.html?name=" + name;
+      }
+    </script>
+  </body>
+</html>
